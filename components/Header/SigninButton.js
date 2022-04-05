@@ -3,11 +3,14 @@ import styled from "styled-components";
 
 /*---> Component <---*/
 function SigninButton({ children, ...restProps }) {
+
   return (
+    
     <div>
       <Link href="/signin" {...restProps}>
         {children}
       </Link>
+      
     </div>
   );
 }
@@ -22,7 +25,7 @@ export const Link = styled.a`
   border: 0;
   font-size: 15px;
   border-radius: 5px;
-  padding: 8px 17px;
+  padding: 10px 17px;
   cursor: pointer;
 `;
 

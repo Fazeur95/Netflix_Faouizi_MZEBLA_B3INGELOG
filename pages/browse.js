@@ -46,7 +46,7 @@ function BrowsePage() {
 
   let { films } = useContent("films");
   films = [
-    { title: "Drama", data: films.filter((item) => item.genre === "drama") },
+    { title: "Drame", data: films.filter((item) => item.genre === "drama") },
     {
       title: "Thriller",
       data: films.filter((item) => item.genre === "thriller"),
@@ -80,12 +80,9 @@ function BrowsePage() {
           <HeaderLink onClick={() => setCategory("series")}>Series</HeaderLink>
         </BrowseNavbar>
         <FeatureWrapperBrowse>
-          <FeatureTitleBrowse>Watch The Irish Man</FeatureTitleBrowse>
+          <FeatureTitleBrowse>Regardez One Piece : Stampede</FeatureTitleBrowse>
           <FeatureSubTitleBrowse>
-            Hit man Frank Sheeran looks back at the secrets he kept as a loyal
-            member of the Bufalino crime family in this acclaimed film from
-            Martin Scorsese.
-          </FeatureSubTitleBrowse>
+          Luffy et son équipage s’apprêtent à participer au plus grand rassemblement des pirates du monde entier : Le PIRATE FEST, organisé par le machiavélique Buena Festa. Les Pirates, les grands corsaires, la Marine et même l’Armée Révolutionnaire s’y retrouvent pour tenter de découvrir le trésor si convoité de Gol D.Roger. </FeatureSubTitleBrowse>
           <PlayButton onClick={() => setShowPlayer(true)}>Play</PlayButton>
           {showPlayer ? (
             <PlayerOverlay onClick={() => setShowPlayer(false)}>

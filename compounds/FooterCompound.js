@@ -5,6 +5,7 @@ import FooterRow from "../components/Footer/FooterRow";
 import FooterColumn from "../components/Footer/FooterColumn";
 import FooterLink from "../components/Footer/FooterLink";
 
+
 function FooterCompound() {
   return (
     <FooterWrapper>
@@ -34,6 +35,9 @@ function FooterCompound() {
           <FooterLink>Acheter des cartes cadeaux</FooterLink>
           <FooterLink>Préférences de cookies</FooterLink>
           <FooterLink>Informations légales</FooterLink>
+        </FooterColumn>
+        <FooterColumn>
+          <FooterLink>Netfazeur France</FooterLink>
         </FooterColumn>
       </FooterRow>
     </FooterWrapper>

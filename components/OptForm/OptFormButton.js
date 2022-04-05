@@ -19,7 +19,6 @@ export const Wrapper = styled.div`
   height: 60px;
   background: #e50914;
   color: #fff;
-  text-transform: uppercase;
   padding: 0 32px;
   font-size: 26px;
   border: 0;

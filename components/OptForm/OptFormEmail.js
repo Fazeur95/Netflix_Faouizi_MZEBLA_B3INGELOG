@@ -1,16 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-/*---> Component <---*/
 function OptFormEmail({ children, ...restProps }) {
   return (
-    <EmailInput placeholder="Email Address" {...restProps}>
+    <EmailInput placeholder="Adresse e-mail" {...restProps}>
       {children}
     </EmailInput>
   );
 }
 
-/*---> Styles <---*/
 export const EmailInput = styled.input`
   max-width: 450px;
   width: 100%;

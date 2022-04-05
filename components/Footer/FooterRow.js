@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-/*---> Component <---*/
+
 function FooterRow({ children, ...restProps }) {
   return <Wrapper {...restProps}>{children}</Wrapper>;
 }
 
-/*---> Styles <---*/
+
 export const Wrapper = styled.div`
   margin-top: 40px;
   display: grid;
