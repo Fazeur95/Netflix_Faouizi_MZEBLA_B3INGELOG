@@ -1,2 +1,6 @@
 # Netflix_Faouizi_MZEBLA_B3INGELOG
- Clone de Netflix
+Clone de Netflix créé par Faouizi MZEBLA.
+
+Si vous ne voulez pas créer de compte pour accéder au film et series :
+- Login : testfaouizi@test.com
+- Mdp : test123
