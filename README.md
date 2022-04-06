@@ -1,7 +1,7 @@
 # Netflix_Faouizi_MZEBLA_B3INGELOG
 Clone de Netflix créé par Faouizi MZEBLA.
 
-------------------------------------------------------------------------------------------------------------------------------
+***
 
 Fonctionnalités :
 - L’application Netflix que vous allez réaliser ne présente que des films (pas de séries) ✅
