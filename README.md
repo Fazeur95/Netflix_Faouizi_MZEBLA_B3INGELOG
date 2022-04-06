@@ -14,7 +14,7 @@ Fonctionnalités :
 - Prévoir des alertes et notifications (validations et erreurs) ✅
 - L’application doit être modularisées en composants, structurés en services, middlewares etc.. ✅
 
-------------------------------------------------------------------------------------------------------------------------------
+***
 
 Bonus :
 - Utilisation de sass ❌
@@ -22,7 +22,7 @@ Bonus :
 - Couche API sur next avec des controllers + bdd (mongoDb etc…) ❌
 - Mise en ligne: Vercel, Netlify, Heroku ✅
 
-------------------------------------------------------------------------------------------------------------------------------
+***
 
 Si vous ne voulez pas créer de compte pour accéder aux films et séries :
 - Login : testfaouizi@test.com
