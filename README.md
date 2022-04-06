@@ -3,7 +3,7 @@
 
 ***
 
-Fonctionnalités :
+### Fonctionnalités :
 - L’application Netflix que vous allez réaliser ne présente que des films (pas de séries) ✅
 - Prévoir un filtre par catégories sur la page des films ✅
 - Prévoir un formulaire de recherche sur le titre d’un film ❌
@@ -16,7 +16,7 @@ Fonctionnalités :
 
 ***
 
-Bonus :
+### Bonus :
 - Utilisation de sass ❌
 - Responsive design (mobile) ✅
 - Couche API sur next avec des controllers + bdd (mongoDb etc…) ❌
@@ -24,6 +24,6 @@ Bonus :
 
 ***
 
-Si vous ne voulez pas créer de compte pour accéder aux films :
+### Si vous ne voulez pas créer de compte pour accéder aux films :
 - Login : testfaouizi@test.com
 - Mdp : test123
