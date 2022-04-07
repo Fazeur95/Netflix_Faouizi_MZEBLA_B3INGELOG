@@ -24,7 +24,7 @@
 
 ***
 
-### Setup :
+### Configuration :
 ```
 npm install dev
 npm install select
