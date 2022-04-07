@@ -15,6 +15,7 @@ export const Wrapper = styled.nav`
   margin-bottom: 175px;
   margin-right: auto;
   margin-left: auto;
+  opacity: 1;
 `;
 
 export default BrowseNavbar;

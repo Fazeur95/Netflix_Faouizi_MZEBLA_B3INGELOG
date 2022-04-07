@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-/*---> Component <---*/
 function HeaderLink({ children, ...restProps }) {
   return (
     <Wrapper>
@@ -10,7 +9,6 @@ function HeaderLink({ children, ...restProps }) {
   );
 }
 
-/*---> Styles <---*/
 export const Wrapper = styled.div`
   padding: 5px;
 

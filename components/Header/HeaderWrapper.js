@@ -9,7 +9,7 @@ function HeaderWrapper({ children, ...restProps }) {
 /*---> Styles <---*/
 export const Wrapper = styled.div`
   background: url("/images/misc/home-bg.jpg");
-  background-position: top left;
+  background-position: top right;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 30px 50px;
