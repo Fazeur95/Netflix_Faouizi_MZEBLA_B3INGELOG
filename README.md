@@ -36,3 +36,7 @@ npm start
 - Login : testfaouizi@test.com
 - Mdp : test123
 
+***
+
+### Bonus ++ :
+- Ajout d'une fonction permettant la sélection de la langue (Français / Anglais)
