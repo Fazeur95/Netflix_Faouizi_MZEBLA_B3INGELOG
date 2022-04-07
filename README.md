@@ -24,6 +24,15 @@
 
 ***
 
-### Si vous ne voulez pas créer de compte pour accéder aux films :
+### Configuration :
+```
+npm install dev
+npm install select
+npm start
+```
+***
+
+### Si vous ne pouvez/voulez pas créer de compte pour accéder aux films :
 - Login : testfaouizi@test.com
 - Mdp : test123
+
