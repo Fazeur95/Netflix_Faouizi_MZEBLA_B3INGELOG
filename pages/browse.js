@@ -23,27 +23,6 @@ import PlayerOverlay from "../components/Movies/PlayerOverlay";
 import FooterCompound from "../compounds/FooterCompound";
 
 function BrowsePage() {
-  let { series } = useContent("series");
-  series = [
-    {
-      title: "Documentaries",
-      data: series.filter((item) => item.genre === "documentaries"),
-    },
-    {
-      title: "Comedies",
-      data: series.filter((item) => item.genre === "comedies"),
-    },
-    {
-      title: "Children",
-      data: series.filter((item) => item.genre === "children"),
-    },
-    { title: "Crime", data: series.filter((item) => item.genre === "crime") },
-    {
-      title: "Feel-Good",
-      data: series.filter((item) => item.genre === "feel-good"),
-    },
-  ];
-
   let { films } = useContent("films");
   films = [
     { title: "Drame", data: films.filter((item) => item.genre === "drama") },
@@ -66,7 +45,7 @@ function BrowsePage() {
   ];
 
   const [category, setCategory] = useState("films");
-  const currentCategory = category === "films" ? films : series;
+  const currentCategory = category === "films" ? films : films;
   const [showCardFeature, setShowCardFeature] = useState(false);
   const [activeItem, setActiveItem] = useState(false);
   const [showPlayer, setShowPlayer] = useState(false);
@@ -77,12 +56,16 @@ function BrowsePage() {
         <BrowseNavbar>
           <Logo />
           <HeaderLink onClick={() => setCategory("films")}>Films</HeaderLink>
-          <HeaderLink onClick={() => setCategory("series")}>Series</HeaderLink>
         </BrowseNavbar>
         <FeatureWrapperBrowse>
           <FeatureTitleBrowse>Regardez One Piece : Stampede</FeatureTitleBrowse>
           <FeatureSubTitleBrowse>
-          Luffy et son équipage s’apprêtent à participer au plus grand rassemblement des pirates du monde entier : Le PIRATE FEST, organisé par le machiavélique Buena Festa. Les Pirates, les grands corsaires, la Marine et même l’Armée Révolutionnaire s’y retrouvent pour tenter de découvrir le trésor si convoité de Gol D.Roger. </FeatureSubTitleBrowse>
+            Luffy et son équipage s’apprêtent à participer au plus grand
+            rassemblement des pirates du monde entier : Le PIRATE FEST, organisé
+            par le machiavélique Buena Festa. Les Pirates, les grands corsaires,
+            la Marine et même l’Armée Révolutionnaire s’y retrouvent pour tenter
+            de découvrir le trésor si convoité de Gol D.Roger.{" "}
+          </FeatureSubTitleBrowse>
           <PlayButton onClick={() => setShowPlayer(true)}>Play</PlayButton>
           {showPlayer ? (
             <PlayerOverlay onClick={() => setShowPlayer(false)}>
