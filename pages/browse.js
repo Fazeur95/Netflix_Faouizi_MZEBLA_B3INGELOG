@@ -21,7 +21,17 @@ import CardFeatureClose from "../components/Movies/CardFeatureClose";
 import PlayerVideo from "../components/Movies/PlayerVideo";
 import PlayerOverlay from "../components/Movies/PlayerOverlay";
 import FooterCompound from "../compounds/FooterCompound";
-
+import Nav from "../components/Movies/Nav";
+import Row from "../components/Movies/Row";
+import Video from "../components/Movies/Video";
+import requests from "../pages/api/Request.js";
+import QuickView from "../components/Movies/QuickView";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 function BrowsePage() {
   let { films } = useContent("films");
   films = [
@@ -75,46 +85,40 @@ function BrowsePage() {
         </FeatureWrapperBrowse>
       </BrowseHeaderWrapper>
 
-      <AllSlidesWrapper>
-        {currentCategory.map((slideItem) => (
-          <SlideWrapper key={`${category}-${slideItem.title.toLowerCase()}`}>
-            <SlideTitle>{slideItem.title}</SlideTitle>
-            <AllCardsWrapper>
-              {slideItem.data.map((cardItem) => (
-                <CardWrapper key={cardItem.docId}>
-                  <CardImage
-                    onClick={() => {
-                      setShowCardFeature(true);
-                      setActiveItem(cardItem);
-                    }}
-                    src={`../images/${category}/${cardItem.genre}/${cardItem.slug}/small.jpg`}
-                  />
-                </CardWrapper>
-              ))}
-            </AllCardsWrapper>
-            {showCardFeature &&
-            slideItem.title.toLowerCase() === activeItem.genre ? (
-              <CardFeatureWrapper
-                style={{
-                  backgroundImage: `url(../images/${category}/${activeItem.genre}/${activeItem.slug}/large.jpg)`,
-                }}
-              >
-                <CardTitle>{activeItem.title}</CardTitle>
-                <CardDescription>{activeItem.description}</CardDescription>
-                <CardFeatureClose onClick={() => setShowCardFeature(false)} />
-                <PlayButton onClick={() => setShowPlayer(true)}>
-                  Play
-                </PlayButton>
-                {showPlayer ? (
-                  <PlayerOverlay onClick={() => setShowPlayer(false)}>
-                    <PlayerVideo src="../videos/video.mp4" type="video/mp4" />
-                  </PlayerOverlay>
-                ) : null}
-              </CardFeatureWrapper>
-            ) : null}
-          </SlideWrapper>
-        ))}
-      </AllSlidesWrapper>
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Nav />
+
+              <Row
+                title="Programmes originaux Netflix"
+                fetchUrl={requests.fetchNetflixOriginals}
+                isPoster={true}
+              />
+              <Row
+                title="Tendances actuelles"
+                fetchUrl={requests.fetchTrending}
+              />
+              <Row title="Les mieux notés" fetchUrl={requests.fetchTopRated} />
+              <Row
+                title="Films d'action"
+                fetchUrl={requests.fetchActionMovies}
+              />
+              <Row title="Films d'horreur" fetchUrl={requests.fetchTrending} />
+              <Row title="Comédies" fetchUrl={requests.fetchTopRated} />
+              <Row
+                title="Documentaires"
+                fetchUrl={requests.fetchActionMovies}
+              />
+            </Route>
+            <Route path="/video/:id" component={Video} />
+            <Route path="*">
+              <Redirect to="/" />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
       <FooterCompound />
     </>
   );

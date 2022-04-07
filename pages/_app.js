@@ -1,14 +1,18 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import "../styles/Row.scss";
+import "../styles/Nav.scss";
+import "../styles/QuickView.scss";
+import "../styles/Video.scss";
+
 import { FirebaseContext } from "../context/FirbaseContext";
 import firebase from "../lib/firebase.prod";
 
-
 function MyApp({ Component, pageProps }) {
   return (
-    <FirebaseContext.Provider value={ firebase }>
+    <FirebaseContext.Provider value={firebase}>
       <Component {...pageProps} />
     </FirebaseContext.Provider>
   );
 }
 
-export default MyApp
+export default MyApp;
