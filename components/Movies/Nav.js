@@ -24,6 +24,7 @@ function Nav() {
         navBlack || toggleMenu ? "nav--black" : "nav--transparent"
       } ${toggleMenu && "show"}`}
     >
+<<<<<<< Updated upstream
       <button className="nav__burger" onClick={handleClick}></button>
 
       <nav className="nav__links">
@@ -31,6 +32,20 @@ function Nav() {
           Films
         </a>
       </nav>
+=======
+      <nav className="nav__links"></nav>
+      <div className="nav__actions">
+        <a href="/*" className="nav__action">
+          Films
+        </a>
+        <a href="/" className="nav__action"></a>
+        <a href="/" className="nav__action"></a>
+        <a href="/" className="nav__action"></a>
+        <a href="/" className="nav__action">
+          <img src="./images/avatar.jpg" alt="" />
+        </a>
+      </div>
+>>>>>>> Stashed changes
     </div>
   );
 }

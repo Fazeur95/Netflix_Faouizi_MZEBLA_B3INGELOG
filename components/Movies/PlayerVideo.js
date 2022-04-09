@@ -5,7 +5,7 @@ import styled from "styled-components";
 function PlayerVideo({ children, ...restProps }) {
   return (
     <Video controls {...restProps}>
-      <source {...restProps} />
+      <source {...Video} />
     </Video>
   );
 }
