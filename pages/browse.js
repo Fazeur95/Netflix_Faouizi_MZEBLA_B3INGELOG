@@ -25,6 +25,7 @@ import Nav from "../components/Movies/Nav";
 import Row from "../components/Movies/Row";
 import Video from "../components/Movies/Video";
 import requests from "../pages/api/Request.js";
+import Banner from "../components/Movies/Banner";
 import QuickView from "../components/Movies/QuickView";
 import {
   BrowserRouter as Router,
@@ -105,11 +106,14 @@ function BrowsePage() {
                 title="Films d'action"
                 fetchUrl={requests.fetchActionMovies}
               />
-              <Row title="Films d'horreur" fetchUrl={requests.fetchTrending} />
-              <Row title="Comédies" fetchUrl={requests.fetchTopRated} />
+              <Row
+                title="Films d'horreur"
+                fetchUrl={requests.fetchHorrorMovies}
+              />
+              <Row title="Comédies" fetchUrl={requests.fetchComedyMovies} />
               <Row
                 title="Documentaires"
-                fetchUrl={requests.fetchActionMovies}
+                fetchUrl={requests.fetchDocumentaries}
               />
             </Route>
             <Route path="/video/:id" component={Video} />

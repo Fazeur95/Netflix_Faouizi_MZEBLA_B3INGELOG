@@ -25,29 +25,12 @@ function Nav() {
       } ${toggleMenu && "show"}`}
     >
       <button className="nav__burger" onClick={handleClick}></button>
-      <img src="./images/logo.png" className="nav__logo" alt="Netflix" />
+
       <nav className="nav__links">
-        <a href="/" className="nav__link">
-          Accueil
-        </a>
-        <a href="/" className="nav__link">
-          Séries
-        </a>
-        <a href="/" className="nav__link">
+        <a href="/films" className="nav__link">
           Films
         </a>
       </nav>
-      <div className="nav__actions">
-        <a href="/" className="nav__action"></a>
-        <a href="/" className="nav__action">
-          DIRECT
-        </a>
-        <a href="/" className="nav__action"></a>
-        <a href="/" className="nav__action"></a>
-        <a href="/" className="nav__action">
-          <img src="./images/avatar.jpg" alt="" />
-        </a>
-      </div>
     </div>
   );
 }
