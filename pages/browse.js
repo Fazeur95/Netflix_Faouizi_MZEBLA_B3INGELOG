@@ -21,30 +21,44 @@ import CardFeatureClose from "../components/Movies/CardFeatureClose";
 import PlayerVideo from "../components/Movies/PlayerVideo";
 import PlayerOverlay from "../components/Movies/PlayerOverlay";
 import FooterCompound from "../compounds/FooterCompound";
-<<<<<<< Updated upstream
 import Nav from "../components/Movies/Nav";
 import Row from "../components/Movies/Row";
 import Video from "../components/Movies/Video";
 import requests from "../pages/api/Request.js";
 import Banner from "../components/Movies/Banner";
 import QuickView from "../components/Movies/QuickView";
-=======
-import requests from "./api/Request";
-import Nav from "../components/Movies/Nav";
-import Row from "../components/Movies/Row";
-import Video from "../components/Movies/Video";
->>>>>>> Stashed changes
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 function BrowsePage() {
+  let { films } = useContent("films");
+  films = [
+    { title: "Drame", data: films.filter((item) => item.genre === "drama") },
+    {
+      title: "Thriller",
+      data: films.filter((item) => item.genre === "thriller"),
+    },
+    {
+      title: "Children",
+      data: films.filter((item) => item.genre === "children"),
+    },
+    {
+      title: "Suspense",
+      data: films.filter((item) => item.genre === "suspense"),
+    },
+    {
+      title: "Romance",
+      data: films.filter((item) => item.genre === "romance"),
+    },
+  ];
+
+  const [category, setCategory] = useState("films");
+  const currentCategory = category === "films" ? films : films;
+  const [showCardFeature, setShowCardFeature] = useState(false);
+  const [activeItem, setActiveItem] = useState(false);
   const [showPlayer, setShowPlayer] = useState(false);
 
   return (
@@ -52,7 +66,7 @@ function BrowsePage() {
       <BrowseHeaderWrapper>
         <BrowseNavbar>
           <Logo />
-          <Nav></Nav>
+          <HeaderLink onClick={() => setCategory("films")}>Films</HeaderLink>
         </BrowseNavbar>
         <FeatureWrapperBrowse>
           <FeatureTitleBrowse>Regardez One Piece : Stampede</FeatureTitleBrowse>
@@ -72,7 +86,6 @@ function BrowsePage() {
         </FeatureWrapperBrowse>
       </BrowseHeaderWrapper>
 
-<<<<<<< Updated upstream
       <div className="App">
         <Router>
           <Switch>
@@ -110,36 +123,6 @@ function BrowsePage() {
           </Switch>
         </Router>
       </div>
-=======
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Nav />
-
-            <Row
-              title="Programmes originaux Netflix"
-              fetchUrl={requests.fetchNetflixOriginals}
-              isPoster={true}
-            />
-            <Row
-              title="Tendances actuelles"
-              fetchUrl={requests.fetchTrending}
-            />
-            <Row title="Les mieux notés" fetchUrl={requests.fetchTopRated} />
-            <Row title="Films d'action" fetchUrl={requests.fetchActionMovies} />
-            <Row title="Films d'horreur" fetchUrl={requests.fetchTrending} />
-            <Row title="Comédies" fetchUrl={requests.fetchTopRated} />
-            <Row title="Documentaires" fetchUrl={requests.fetchActionMovies} />
-          </Route>
-
-          <Route path="/video/:id" component={Video} />
-
-          <Route path="*">
-            <Redirect to="/" />
-          </Route>
-        </Switch>
-      </Router>
->>>>>>> Stashed changes
       <FooterCompound />
     </>
   );
