@@ -17,7 +17,7 @@
 ***
 
 ### Bonus :
-- Utilisation de sass ❌
+- Utilisation de sass ✅
 - Responsive design (mobile) ✅
 - Couche API sur next avec des controllers + bdd (mongoDb etc…) ❌
 - Mise en ligne: Vercel, Netlify, Heroku ✅
