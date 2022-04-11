@@ -48,29 +48,29 @@ function SigninPage() {
         </Navbar>
         <SignFormWrapper>
           <SignFormBase onSubmit={handleSubmit} method="POST">
-            <SignFormTitle>Sign In</SignFormTitle>
+            <SignFormTitle>S'identifier</SignFormTitle>
             {error ? <SignFormError>{error}</SignFormError> : null}
             <SignFormInput
               type="text"
-              placeholder="Email Address"
+              placeholder="E-mail ou numéro de téléphone"
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}
             />
             <SignFormInput
               type="password"
-              placeholder="Password"
+              placeholder="Mot de passe"
               autoComplete="off"
               value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
-            <SignFormButton disabled={IsInvalid}>Sign In</SignFormButton>
+            <SignFormButton disabled={IsInvalid}>S'identifier</SignFormButton>
             <SignFormText>
-              New to Netflix?
-              <SignFormLink href="/signup">Sign up now.</SignFormLink>
+              Première visite sur Netflix ?
+              <SignFormLink href="/signup">Inscrivez-vous</SignFormLink>
             </SignFormText>
             <SignFormCaptcha>
-              This page is protected by Google reCAPTCHA to ensure you are not a
-              bot.
+              Cette page est protégée par Google reCAPTCHA pour nous assurer que
+              vous n'êtes pas un robot.
             </SignFormCaptcha>
           </SignFormBase>
         </SignFormWrapper>
