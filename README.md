@@ -30,8 +30,6 @@ npm install
 npm run dev
 ```
 ***
-![image](https://user-images.githubusercontent.com/56970054/162690282-5a02a01a-3b28-46cc-8651-46195e8054c4.png)
-
 
 ### Si vous ne pouvez/voulez pas créer de compte pour accéder aux films :
 - Login : testfaouizi@test.com
